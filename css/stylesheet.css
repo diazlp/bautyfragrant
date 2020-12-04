@@ -8,7 +8,7 @@ body {
   font-family: monospace, sans-serif;
 }
 
-ul,li,a {
+ul, li, a {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -17,7 +17,7 @@ ul,li,a {
 
 .help {
   font-family: Helvetica, sans-serif;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   position: absolute;
   width: 20%;
   z-index: 5;
@@ -25,10 +25,10 @@ ul,li,a {
   text-transform: uppercase;
   border: 1px solid #000000;
   right: 5%;
-  display:none;
+  display: none;
 }
 
-.strike-through{
+.strike-through {
   text-decoration: line-through;
 }
 
@@ -54,7 +54,7 @@ ul,li,a {
   text-transform: uppercase;
 }
 
-.top-ads i{
+.top-ads i {
   font-size: 1.3em;
   padding: 0;
   position: absolute;
@@ -62,14 +62,14 @@ ul,li,a {
   cursor: pointer;
 }
 
-.signin-modal-wrapper,.login-modal-wrapper  {
+.signin-modal-wrapper, .login-modal-wrapper {
   display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
@@ -83,7 +83,7 @@ ul,li,a {
   width: 40%;
   height: auto;
   padding: 20px 0 40px;
-  text-align : center;
+  text-align: center;
 }
 
 .close-login {
@@ -93,7 +93,7 @@ ul,li,a {
   cursor: pointer;
 }
 
-.signin-form form input{
+.signin-form form input {
   display: inline-flex;
   padding: 3px 6px;
   width: 50%;
@@ -115,7 +115,7 @@ header {
   margin: 0 40px;
   align-items: center;
   justify-content: space-between;
-  height:  60px;
+  height: 60px;
 }
 
 header .header-left {
@@ -147,11 +147,11 @@ header ul li:hover {
   border-bottom: 3px solid #247db6;
 }
 
-header ul li span{
+header ul li span {
   font-weight: bold;
 }
 
-header ul li i{
+header ul li i {
   color: #8f8f8f;
   display: inline-block;
 }
@@ -209,7 +209,7 @@ section .top-shop {
 }
 
 section .top-shop img {
-  width:100%;
+  width: 100%;
   height: 50%;
 }
 
@@ -223,8 +223,7 @@ main .main-title {
   margin: 0 30px;
 }
 
-
-h3:before, h3:after{
+h3:before, h3:after {
   content: "";
   background-color: #616161;
   display: inline-block;
@@ -255,7 +254,7 @@ main .scent p {
 main .scent .scent-desc {
   font-weight: normal;
   font-size: 1.3vw;
-  display:none;
+  display: none;
 }
 
 main .best-selling {
@@ -265,7 +264,7 @@ main .best-selling {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-main .best-selling img{
+main .best-selling img {
   max-height: 20%;
 }
 
@@ -303,8 +302,7 @@ main .best-selling img{
   color: #ffffff;
   position: absolute;
   margin-top: -3px;
-  display:none;
-
+  display: none;
 }
 
 .section .email-form input {
@@ -328,8 +326,8 @@ footer {
   font-weight: bold;
   font-size: 13px;
   justify-content: space-between;
-  text-align:center;
-  margin-bottom: 8px;
+  text-align: center;
+  margin: 8px;
 }
 
 footer .footer-container {
@@ -351,7 +349,7 @@ footer ul li {
 
 .responsive {
   color: #A12E46;
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
   display: none;
   text-align: center;
   height: 100%;
@@ -377,7 +375,7 @@ footer ul li {
   grid-template-columns: 1fr;
   align-content: center;
   display: block;
-  z-index:100;
+  z-index: 100;
   font-size: 20px;
 }
 
@@ -387,7 +385,6 @@ footer ul li {
 }
 
 /* simple responsive */
-
 @media all and (max-width: 600px) {
   .body {
     display: none;

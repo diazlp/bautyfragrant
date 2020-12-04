@@ -1,26 +1,26 @@
 $(function() {
 
-//page scroll
+  //page scroll
   $('top-page').click(function() {
     $('html,body').animate({
       'scrollTop': 0
     }, 'slow');
   });
 
-//close top offer
+  //close top offer
   $('#close-top').click(function() {
-    $(this).css('color','red');
+    $(this).css('color', 'red');
     $('.top-ads').slideUp('fast');
   });
 
-//hover "can" and close top offer
+  //hover "can" and close top offer
   $('.close-top').hover(
     function() {
-      $(this).css('color','red');
-      $(this).css('cursor','pointer');
+      $(this).css('color', 'red');
+      $(this).css('cursor', 'pointer');
     },
     function() {
-      $(this).css('color','#A14E26');
+      $(this).css('color', '#A14E26');
     }
   );
 
@@ -28,7 +28,7 @@ $(function() {
     $('.top-ads').slideUp('fast');
   });
 
-//strikethrough text
+  //strikethrough text
   $('.strike').hover(
     function() {
       $(this).addClass('strike-through');
@@ -38,15 +38,14 @@ $(function() {
     }
   );
 
-//sign-in complex
-  $('#sign-in').click(function(){
+  //sign-in complex
+  $('#sign-in').click(function() {
     $('#signin-modal').show(100);
   });
 
-  $('.close-modal').click(function(){
+  $('.close-modal').click(function() {
     $('#signin-modal').hide(100);
     $('#login-modal').hide(100);
-
   });
 
 
@@ -76,11 +75,10 @@ $(function() {
     $('#login-modal').show();
 
     if (userMail == '') {
-      $('#userEmail').text('[input Email to validate]').css('color','red').css('font-size','13px');
+      $('#userEmail').text('[input Email to validate]').css('color', 'red').css('font-size', '13px');
     } else {
       $('#userEmail').text(userMail);
     }
-
   });
 
   $('#logout-btn').click(function() {
@@ -91,7 +89,7 @@ $(function() {
   });
 
 
-//help yourself
+  //help yourself
   $('#help').hover(
     function() {
       $('.help').slideDown();
@@ -101,31 +99,31 @@ $(function() {
     }
   );
 
-//contact scroll
+  //contact scroll
   $('.contacts').click(function() {
     var id = $(this).attr('id');
     var position = $(id).offset().top;
 
     $('html,body').animate({
-      'scrollTop':position
+      'scrollTop': position
     }, 500);
 
   });
 
-//animate "Shop Now"
+  //animate "Shop Now"
   var shopNow = $('h4');
   shopNow.hover(
-    function(){
-      $(this).css("background-color","#A14E26");
-      $(this).css("color","#ffffff");
+    function() {
+      $(this).css("background-color", "#A14E26");
+      $(this).css("color", "#ffffff");
     },
-    function(){
-      $(this).css("background","none");
-      $(this).css("color","#A14E26");
+    function() {
+      $(this).css("background", "none");
+      $(this).css("color", "#A14E26");
     }
   );
 
-//display scent text
+  //display scent text
   $('.scent').hover(
     function() {
       $(this).find('.scent-desc').show();
@@ -135,32 +133,31 @@ $(function() {
     }
   );
 
-//product carousel
+  //product carousel
   $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
+    loop: true,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
       }
+    }
   });
 
-//subscribe button
-
+  //subscribe button
   $('.fa-angle-right').click(function() {
     $('.email-form input').hide();
     $('.email-form button').hide();
     $('.email-form p').show();
   });
 
-// simple responsive on small device
+  // simple responsive on small device
   $('.x-responsive').click(function() {
     $(this).fadeToggle(100);
     $('.y-responsive').fadeToggle(100);

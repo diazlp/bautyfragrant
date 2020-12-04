@@ -1,0 +1,240 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BautyFragrant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/interactive.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/533b9c4f79.js"></script>
+  </head>
+
+<body>
+
+  <div class="responsive">
+    <div class="hamburger-btn">
+      <i class="x-responsive fas fa-bars"></i>
+      <i class="y-responsive fas fa-times"></i>
+      <h3></h3>
+    </div>
+    <div class="responsive-container">
+      <ul>
+        <li>Home</li>
+        <li>Product</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Brands</li>
+      </ul>
+    </div>
+  </div>
+
+<div class="body">
+    <div class="top-ads">
+      <p>an offer you <span class="close-top">CAN</span><b>NOT</b> refuse </p>
+      <i class="fa fa-times" id="close-top"></i>
+    </div>
+
+  <header>
+      <div id="top-page" class="header-left">
+        <h1>BautyFragrant</h1>
+      </div>
+
+        <ul>
+          <li><span><i class="diss fas fa-shipping-fast"></i> Free </span><br> Shipping</li>
+          <li><span><i class="diss fas fa-sync"></i> 100% </span><br> Secure</li>
+          <li><span><i class="diss fas fa-medal"></i> 100% </span><br> Authentic</li>
+        </ul>
+  </header>
+
+  <nav>
+    <ul>
+      <!-- nothing except brands -->
+      <li class="strike">women's perfume</li>
+      <li class="strike">men's cologne</li>
+      <li class="strike">brands</li>
+    </ul>
+
+    <ul>
+      <li style="display: none;" class="welcomeOut">Welcome, <span id="userName"></span></li>
+      <li class="welcomeName" id="sign-in">sign in</li>
+      <li id="help">help</li>
+      <li id="#contact" class="contacts">contact</li>
+    </ul>
+  </nav>
+
+
+  <div class="signin-modal-wrapper" id="signin-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="close-login fa fa-times" style="font-size: 25px; "></i>
+      </div>
+      <div class="signin-form">
+          <i class="far fa-user-circle" style="font-size: 45px;color:#e24cca;"></i>
+          <h2>Login</h2>
+          <hr size="2px"><br>
+          <form action="#">
+            <div class="username">
+              <label for="username">Username:</label>
+              <input id="user-input" type="text" placeholder="Username/Email">
+            </div>
+            <div class="password">
+              <label for="Password"> Password: </label>
+              <input id="user-password" type="password" placeholder="Password">
+              <p id="error-message" class="error-message"></p>
+            </div>
+            <div class="login-btn fas fa-sign-in-alt" id="login-btn">Login</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-modal-wrapper" id="login-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="close-login fa fa-times" style="font-size: 25px; "></i>
+      </div>
+      <div class="login-info">
+        <i class="far fa-user-circle" style="font-size: 45px;color:#e24cca;"></i>
+        <h2>User Info</h2>
+        <hr size="2px">
+        <p>You are logged in as:</p>
+        <div class="user-info">
+          <label for="username">Username: </label>
+          <p style="color:rgb(160, 33, 96); font-weight:bolder;" id="userInfo"></p>
+        </div>
+        <div class="user-email">
+          <label for="email">Email: </label>
+          <p style="color:rgb(160, 33, 96); font-weight:bolder;" id="userEmail"></p>
+        </div>
+        <div class="logout-btn fas fa-power-off" id="logout-btn"> Logout</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="help">
+    <h6>please go help yourself, LOL</h6>
+  </div>
+
+  <section>
+    <h4><div class="slide">shop now</div></h4>
+    <div class="top-shop">
+      <img src="img/shop-now.png" alt="shop now image">
+    </div>
+  </section>
+
+
+  <main>
+    <div class="main-title">
+      <h3>our scents</h3>
+    </div>
+
+    <div class="scents">
+      <div class="scent">
+        <img src="img/daisy.jpg" alt="daisy flowers">
+        <p class=" scent-title">daisies</p>
+        <p class="scent-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="scent">
+        <img src="img/helichrysum-italicum.jpg" alt="italicum flowers">
+        <p class=" scent-title">italicumus</p>
+        <p class="scent-desc">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
+      <div class="scent">
+        <img src="img/flowering-dogwood.jpg" alt="dogwood flowers">
+        <p class=" scent-title">dogwoods</p>
+        <p class="scent-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+       </div>
+    </div>
+
+  <div class="best-seller">
+      <h3>BEST SELLING FRAGRANCE</h3>
+  <!-- img/products/product-x -->
+    <div class="best-selling">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="img">
+              <img src="img/products/product-1.jpg" alt="a"></div>
+            <div class="title" style="margin-top:10px;">Bright Cristal by Versace</div>
+          </div>
+            <div class="item">
+              <div class="img">
+                <img src="img/products/product-2.jpg" alt="b"></div>
+              <div class="title"  style="margin-top:10px;">La Vie Est Belle by Lancome</div>
+          </div>
+          <div class="item">
+            <div class="img">
+              <img src="img/products/product-3.jpg" alt="c"></div>
+            <div class="title"  style="margin-top:10px;">Chrome by Azaro</div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-4.jpeg" alt="d"></div>
+          <div class="title" style="margin-top:10px;">Allure for Hommes by Chanel</div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-5.jpg" alt="e"></div>
+          <div class="title" style="margin-top:10px;">Euphoria by Calvin Klein</div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-6.jpg" alt="f"></div>
+          <div class="title" style="margin-top:10px;">Camouflage Snowman</div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-7.jpg" alt="g"></div>
+          <div class="title" style="margin-top:10px;">Lolita Lempicka by Lolita Lempicka</div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-8.jpg" alt="h"></div>
+          <div class="title" style="margin-top:10px;">Angel by Thierry Mugler </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="img/products/product-9.jpg" alt="i"></div>
+          <div class="title" style="margin-top:10px;">212 Men NYC</div>
+        </div>
+        </div>
+    </div>
+  </div>
+  </main>
+
+  <div class="section">
+    <div class="section-container">
+      <div class="join-us">
+        <h2 style="text-transform:uppercase";>join our mailing list</h2>
+        <p>Don't Miss Latest Promotion Send to Your Email</p>
+      </div>
+      <div id="contact" class="email-form">
+        <p class="note form-success"><strong>Thanks for Subscribing!</strong></p>
+        <input id="inputMail" type="email" placeholder="Enter email" autocomplete="off" autocapitalize="off" required>
+        <button type="submit" class="fa fa-angle-right"></button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+        <ul class="footer-logo">
+          <li>  <i class="fab fa-instagram"></i></li>
+          <li>  <i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+        </ul>
+      <div class="footer-text">
+        Copyright &copy 2020 BautyFragrant.com, Inc. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>

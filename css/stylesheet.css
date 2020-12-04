@@ -1,0 +1,399 @@
+@import url('http://fonts.cdnfonts.com/css/gill-sans-nova');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/img/controls.png');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace, sans-serif;
+}
+
+ul,li,a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.help {
+  font-family: Helvetica, sans-serif;
+  background: rgba(255,255,255,1);
+  position: absolute;
+  width: 20%;
+  z-index: 5;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+  right: 5%;
+  display:none;
+}
+
+.strike-through{
+  text-decoration: line-through;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.top-ads {
+  background-color: #F6F9FF;
+  color: #A14E26;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+}
+
+.top-ads p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.top-ads i{
+  font-size: 1.3em;
+  padding: 0;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+.signin-modal-wrapper,.login-modal-wrapper  {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.modal {
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: #fff;
+  border: 5px double rgb(160, 33, 96);
+  width: 40%;
+  height: auto;
+  padding: 20px 0 40px;
+  text-align : center;
+}
+
+.close-login {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.signin-form form input{
+  display: inline-flex;
+  padding: 3px 6px;
+  width: 50%;
+  margin: 1%;
+}
+
+.signin-form form .login-btn, .login-info .logout-btn {
+  cursor: pointer;
+  margin-top: 14px;
+  background: #A12E46;
+  padding: 11px 26px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+header {
+  border-bottom: 1px solid black;
+  display: flex;
+  margin: 0 40px;
+  align-items: center;
+  justify-content: space-between;
+  height:  60px;
+}
+
+header .header-left {
+  cursor: pointer;
+  color: #e24cca;
+  margin: 0;
+  float: left;
+  font-family: "Nova Mono", monospace, sans-serif;
+  font-size: 15px;
+  line-height: 10px;
+}
+
+header ul {
+  display: flex;
+  position: relative;
+  cursor: context-menu;
+  text-transform: uppercase;
+}
+
+header ul li {
+  margin: 0 10px;
+  width: auto;
+}
+
+header ul li:hover {
+  color: #247db6;
+  position: relative;
+  top: 3px;
+  border-bottom: 3px solid #247db6;
+}
+
+header ul li span{
+  font-weight: bold;
+}
+
+header ul li i{
+  color: #8f8f8f;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: 0 35px;
+  height: 35px;
+}
+
+nav ul {
+  display: flex;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 8px 5px;
+  margin: 0 5px;
+}
+
+nav ul li:hover {
+  color: #FF4E26;
+  position: relative;
+  border-top: 3px solid black;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+}
+
+section h4 {
+  color: #A14E26;
+  font-size: 1.2em;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border: 2px solid #ffcfaf;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+  text-transform: uppercase;
+  padding: 17px;
+  border-radius: 10%;
+  display: none;
+  /* nanti ini diganti textnya */
+}
+
+section .top-shop {
+  margin: 20px 40px;
+}
+
+section .top-shop img {
+  width:100%;
+  height: 50%;
+}
+
+main {
+  margin: 30px 0;
+  text-align: center;
+}
+
+main .main-title {
+  text-transform: uppercase;
+  margin: 0 30px;
+}
+
+
+h3:before, h3:after{
+  content: "";
+  background-color: #616161;
+  display: inline-block;
+  width: 20%;
+  height: 1px;
+  margin: 0 25px;
+  vertical-align: middle;
+}
+
+main .scents {
+  margin: 35px 35px 30px;
+  display: flex;
+  font-family: "Gill Sans Nova", Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+main .scent img {
+  max-width: 80%;
+  border-radius: 50%;
+}
+
+main .scent p {
+  font-size: 2.4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+main .scent .scent-desc {
+  font-weight: normal;
+  font-size: 1.3vw;
+  display:none;
+}
+
+main .best-selling {
+  width: 100%;
+  margin: 50px 0;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+main .best-selling img{
+  max-height: 20%;
+}
+
+.section {
+  background-color: #A12E46;
+  text-align: center;
+}
+
+.section .section-container {
+  height: 200px;
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  align-content: center;
+}
+
+.section .section-container .join-us {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-left: 20px;
+  align-content: flex-start;
+  text-align: justify;
+}
+
+.section .section-container .email-form {
+  padding: 7px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section .email-form p {
+  font-size: 1.5vw;
+  font-family: Helvetica, sans-serif;
+  color: #ffffff;
+  position: absolute;
+  margin-top: -3px;
+  display:none;
+
+}
+
+.section .email-form input {
+  align-items: center;
+  padding: 7px 25px;
+  font-size: 1.8vw;
+}
+
+.section .email-form button {
+  font-weight: bold;
+  margin-left: 5px;
+  border: 0 none;
+  outline: none;
+  background: transparent;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+footer {
+  font-family: Helvetica, monospace, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  justify-content: space-between;
+  text-align:center;
+  margin-bottom: 8px;
+}
+
+footer .footer-container {
+  padding: 0px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  cursor: pointer;
+  font-size: 20px;
+  width: 30%;
+}
+
+.responsive {
+  color: #A12E46;
+  background-color: rgba(255,255,255,1);
+  display: none;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+
+.responsive .hamburger-btn {
+  cursor: pointer;
+  font-size: 40px;
+  padding-top: 40px;
+  margin: 70px 0;
+}
+
+.responsive .hamburger-btn .y-responsive {
+  display: none;
+}
+
+.responsive-container {
+  cursor: pointer;
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  display: block;
+  z-index:100;
+  font-size: 20px;
+}
+
+.responsive-container ul li {
+  font-size: 30px;
+  margin: 30px;
+}
+
+/* simple responsive */
+
+@media all and (max-width: 600px) {
+  .body {
+    display: none;
+  }
+
+  .responsive {
+    display: block;
+  }
+}

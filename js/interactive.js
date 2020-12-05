@@ -38,21 +38,22 @@ $(function() {
     }
   );
 
-  //sign-in complex
+  //log-in complex
   $('#sign-in').click(function() {
     $('#signin-modal').show(100);
   });
-
+      // closing modal
   $('.close-modal').click(function() {
     $('#signin-modal').hide(100);
     $('#login-modal').hide(100);
   });
 
-
+    //login and show
   $('#login-btn').click(function() {
     var userName = $('#user-input').val();
     var passWord = $('#user-password').val();
 
+      // error message modal
     function execute() {
       $('#error-message').text('');
       $('#signin-modal').hide(100);
@@ -67,20 +68,22 @@ $(function() {
       execute();
     }
   });
-
+      //user modal for logging out
   $('.welcomeOut').click(function() {
     var userName = $('#user-input').val();
     var userMail = $('#inputMail').val();
     $('#userInfo').text(userName);
     $('#login-modal').show();
 
+      //checking subscribe
     if (userMail == '') {
       $('#userEmail').text('[input Email to validate]').css('color', 'red').css('font-size', '13px');
     } else {
-      $('#userEmail').text(userMail);
+      $('#userEmail').text(userMail).css('color','rgb(160, 33, 96)').css('font-size','16px');
     }
   });
 
+      //logout user
   $('#logout-btn').click(function() {
     $('#login-modal').hide();
     $('#signin-modal').show();
@@ -107,8 +110,21 @@ $(function() {
     $('html,body').animate({
       'scrollTop': position
     }, 500);
-
   });
+
+  // text-transform on hover
+  $('#text-transform').hover(
+    function() {
+      $(this).css('color','rgb(187, 129, 51)');
+      $(this).addClass('bg-added');
+      $(this).addClass('bg-removed');
+      $(this).toggleClass('bg-removed');
+    },
+    function() {
+      $(this).css('color','rgb(255,255,255)');
+      $(this).addClass('bg-removed');
+    }
+  );
 
   //animate "Shop Now"
   var shopNow = $('h4');
@@ -156,6 +172,7 @@ $(function() {
     $('.email-form button').hide();
     $('.email-form p').show();
   });
+
 
   // simple responsive on small device
   $('.x-responsive').click(function() {

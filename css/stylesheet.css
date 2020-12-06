@@ -38,15 +38,16 @@ ul, li, a {
 }
 
 .bg-added {
-  background: linear-gradient(to left, rgba(255,255,255,0.55) 50%,rgba(187, 129, 51, 0.45)  50%) right;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.55) 50%, rgba(187, 129, 51, 0.45) 50%) right;
   background-size: 200%;
-  transition: .5s ease ;
+  transition: .5s ease;
+  opacity: 1;
 }
 
 .bg-removed {
-  background: linear-gradient(to right, rgba(187, 129, 51, 0.45) 50%,rgba(255,255,255,0.55)  50%) left;
+  background: linear-gradient(to right, rgba(187, 129, 51, 0.55) 50%, rgba(255, 255, 255, 0.45) 50%) left;
   background-size: 200%;
-  transition: .5s ease ;
+  transition: .5s ease;
 }
 
 .top-ads {
@@ -87,7 +88,7 @@ ul, li, a {
 .modal {
   border-radius: 10px;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 30%;
   background-color: #fff;
   border: 5px double rgb(160, 33, 96);
@@ -207,24 +208,25 @@ section .overlay-wrapper img {
 
 section .overlay-wrapper:hover .overlay-text-container {
   opacity: 1;
-  transform: scale(1, 1);
+  background: linear-gradient(to right, rgba(187, 129, 51, 0.45) 50%, rgba(0, 0, 0, 0) 50%) left;
+  transition: all .9s ease-in-out;
+  background-size: 200%;
 }
 
 section .overlay-text-container {
   position: absolute;
-  display: block;
   top: 165px;
   left: 40px;
   right: 40px;
   height: 50%;
   opacity: 0;
-  transform: scale(0, 0);
   overflow: hidden;
-  transition: all .4s ease-in-out 0s;
-  background: rgba(187, 129, 51, 0.45);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, rgba(187, 129, 51, 0.45) 50%) right;
+  transition: all .9s ease-in-out;
+  background-size: 200%;
 }
 
-section .overlay-text-container .overlay-text{
+section .overlay-text-container .overlay-text {
   border: 2px solid #FFFFF0;
   position: absolute;
   top: 38%;
@@ -234,7 +236,7 @@ section .overlay-text-container .overlay-text{
   text-transform: uppercase;
   color: #ffffff;
   font-size: 1.5em;
-  font-weight:bolder;
+  font-weight: bolder;
   cursor: pointer;
   padding: 28px 25px;
   border-radius: 10%;
@@ -379,8 +381,8 @@ footer ul li {
   background-color: rgba(255, 255, 255, 1);
   display: none;
   text-align: center;
+  transition: all .2s linear;
   height: 100%;
-  display: none;
 }
 
 .responsive .hamburger-btn {
@@ -392,12 +394,19 @@ footer ul li {
 
 .responsive .hamburger-btn .y-responsive {
   display: none;
+  transform: scale(0, 0);
+  transition: all .5s ease;
+}
+
+.responsive .hamburger-btn .x-responsive {
+  transform: scale(1, 1);
+  transition: all .5s ease;
 }
 
 .responsive-container {
   cursor: pointer;
   width: 100%;
-  margin: 50px 0;
+  margin: 20px 0;
   display: grid;
   grid-template-columns: 1fr;
   align-content: center;
@@ -407,12 +416,79 @@ footer ul li {
 }
 
 .responsive-container ul li {
+  transform: translateX(-100%);
   font-size: 30px;
   margin: 30px;
+  padding: 0 10px;
+}
+
+.darkSlider {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.darkToggle {
+  background-color: #292c35;
+  color: #fa0fbf;
+  transition: all .2s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked+.label {
+  background-color: #A12E46;
+  transition: all .2s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(40px);
+}
+
+.label {
+  border: 2px double #A12E46;
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all .2s linear;
+  height: 26px;
+  width: 65px;
+}
+
+.ball {
+  left: 2px;
+  border: 1px double #fafafa;
+  border-radius: 50px;
+  background-color: #79797d;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  transition: transform .2s linear;
+}
+
+.fa-moon {
+  color: #F1C40F;
+}
+
+.fa-sun {
+  color: #F39C12;
 }
 
 /* simple responsive */
 @media all and (max-width: 600px) {
+  body {
+    transition: all .2s linear;
+  }
+
   .body {
     display: none;
   }

@@ -32,14 +32,6 @@
         <li>Contact</li>
         <li>Brands</li>
       </ul>
-      <div class="darkSlider">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="label">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <span class="ball"></span>
-        </label>
-      </div>
     </div>
   </div>
 
@@ -68,6 +60,15 @@
         <li class="strike">brands</li>
       </ul>
 
+      <div class="darkSlider">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+
       <ul>
         <li style="display: none;" class="welcomeOut">Welcome, <span id="userName"></span></li>
         <li class="welcomeName" id="sign-in">sign in</li>
@@ -89,12 +90,13 @@
           <form action="#">
             <div class="username">
               <label for="username">Username:</label>
-              <input id="user-input" type="text" placeholder="Username/Email">
+              <input id="user-input" type="text" placeholder="Username/Email" maxlength="10">
             </div>
             <div class="password">
               <label for="Password"> Password: </label>
-              <input id="user-password" type="password" placeholder="Password">
+              <input id="user-password" type="password" placeholder="Password" maxlength="15">
               <p id="error-message" class="error-message"></p>
+              <p id="hint-password" class="hint-password"></p>
             </div>
             <div class="login-btn fas fa-sign-in-alt" id="login-btn">Login</div>
           </form>
@@ -234,7 +236,7 @@
         </div>
         <div id="contact" class="email-form">
           <p class="note form-success"><strong>Thanks for Subscribing!</strong></p>
-          <input id="inputMail" type="email" placeholder="Enter email" autocomplete="off" autocapitalize="off" required>
+          <input id="inputMail" type="email" placeholder="Enter email" autocomplete="off" autocapitalize="off" maxlength="30" required>
           <button type="submit" class="fa fa-angle-right"></button>
         </div>
       </div>

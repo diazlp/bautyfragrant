@@ -62,10 +62,19 @@ $(function() {
       $('.welcomeName').hide();
       $('.welcomeOut').show();
       $('#userName').text(userName);
+      $('#hint-password').text('');
+    }
+
+    function invalid() {
+      $('#error-message').text('Invalid username or password');
     }
 
     if (userName == '' || passWord == '') {
-      $('#error-message').text('Invalid username or password');
+      invalid();
+      $('#hint-password').text('');
+    } else if (userName == '' || passWord != '123456') {
+      invalid();
+      $('#hint-password').html('<b><em>Hint Password: 123456</em></b>').css('font-size', '13px').css('color', 'black');
     } else {
       execute();
     }
@@ -194,6 +203,7 @@ $(function() {
   $('#checkbox').click(function() {
     $('body').toggleClass('darkToggle');
     $('.responsive').toggleClass('darkToggle');
+    $('header').toggleClass('line-change');
   });
 
 });
